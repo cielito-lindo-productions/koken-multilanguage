@@ -1,0 +1,23 @@
+{
+	"name": "Multi-language",
+	"version": "1.0",
+	"description": "Allows to add multi-language support to your site.",
+	"demo": "https://cielitolindo.de",
+	"author": {
+		"name": "Cielito Lindo Productions",
+		"link": "https://cielitolindo.de"
+	},
+	"data": {
+		"extractstrings": {
+			"label": "Activate string extraction mode",
+			"info":"visible in Console of DeveloperTools",
+			"type": "boolean",
+			"value": false
+		},
+		"fallbacklanguage": {
+			"label": "fallback language",
+			"info": "CDN hostname to deliver content",
+			"type": "string"
+		}
+	}
+}
