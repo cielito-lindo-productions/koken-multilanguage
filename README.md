@@ -11,7 +11,7 @@ Requirements
 Demonstration
 ------------
 
-1. Will be added soon
+Will be added soon
 
 Installation
 ------------
@@ -24,7 +24,7 @@ Installation
 
 4. Add in your template a language selector with eg. 
 ```html
-<a href='./?lng=en'>en</a>&nbsp;|&nbsp;<a href='./?lng=de'>de</a></code>
+<a href='./?lng=en'>en</a>&nbsp;|&nbsp;<a href='./?lng=de'>de</a>
 ```
 
 Changelog
