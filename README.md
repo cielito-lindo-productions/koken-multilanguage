@@ -22,7 +22,7 @@ Installation
 
 3. If necessary you can set a fallback language. If none is selected then english will be used.
 
-4. Add on your page a language selector with eg. <a href='./?lng=en'>en</a>&nbsp;|&nbsp;<a href='./?lng=de'>de</a>
+4. Add in your template a language selector with eg. <code><a href='./?lng=en'>en</a>&nbsp;|&nbsp;<a href='./?lng=de'>de</a></code>
 
 Changelog
 ---------
