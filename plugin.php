@@ -18,8 +18,8 @@ class KokenMultilanguage extends KokenPlugin {
  			$fallbacklanguage='$this->data->fallbacklanguage';
 		}
 		echo <<<OUT
-			//a local min.js file is used as it contains less console-output; it can be replaced eg. by 
-			//https://unpkg.com/i18nextify@2.1.0/i18nextify.js
+			<!--a local min.js file is used as it contains less console-output; it can be replaced eg. by 
+			//https://unpkg.com/i18nextify@2.1.0/i18nextify.js-->
 			<br><script src="{$path}/assets/i18nextify_lessconsoleoutput.min.js"></script>
 			<script src="https://unpkg.com/i18next-browser-languagedetector@2.0.0/i18nextBrowserLanguageDetector.js"></script>
 			<script>
