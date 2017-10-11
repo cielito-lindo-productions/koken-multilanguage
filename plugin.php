@@ -25,9 +25,12 @@ class KokenMultilanguage extends KokenPlugin {
       	 $fallbacklanguage='$this->data->fallbacklanguage';
       }      
 		echo <<<OUT
-    <br><script src="{$path}/multi-language/i18nextify_lessconsoleoutput.min.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+    //a local min.js file is used as it contains less console-output; it can be replaced eg. by 
+    //https://unpkg.com/i18nextify@2.1.0/i18nextify.js
+    <br><script src="{$path}/assets/i18nextify_lessconsoleoutput.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@2.0.0/i18nextBrowserLanguageDetector.js"></script>
     <script>
+	window.i18nextify.i18next.use(i18nextBrowserLanguageDetector);
 	var languageDetectorOptions = 
   	{
 		// order and from where user language should be detected
@@ -43,7 +46,7 @@ class KokenMultilanguage extends KokenPlugin {
 		excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
 
 		// optional expire and domain for set cookie
-		cookieMinutes: 10,
+		cookieMinutes: 60,
 		cookieDomain: 'myDomain',
 
 		// optional htmlTag with lang attribute, the default is:
@@ -55,13 +58,14 @@ class KokenMultilanguage extends KokenPlugin {
 		  saveMissing: '{$truefalse}',
         namespace: 'translation',
         fallbackLng: '{$fallbacklanguage}',
-        ignoreTags: ['script','img'],
-        ignoreIds: ['ignoreMeId'],
-        ignoreClasses: ['ignoreMeClass'],
+	detector: languageDetectorOptions,
+        ignoreTags: ['script','img','noscript', 'alt', 'src'],
+        ignoreIds: ['ignoreMeId','noscript', 'alt', 'src'],
+        ignoreClasses: ['ignoreMeClass','noscript', 'alt', 'src'],
     	backend: {
 	      // for all available options read the backend's repository readme file
-	      loadPath: '{$path}/multi-language/locales/{{lng}}/{{ns}}.json',
-	      addPath: '{$path}/multi-language/locales/add/{{lng}}/{{ns}}.missing.json'
+	      loadPath: '{$path}/assets/locales/{{lng}}/{{ns}}.json',
+	      addPath: '{$path}/assets/locales/add/{{lng}}/{{ns}}.missing.json'
 	}
       });
     </script>

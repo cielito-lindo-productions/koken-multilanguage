@@ -8,12 +8,6 @@
 		"link": "https://cielitolindo.de"
 	},
 	"data": {
-		"extractstrings": {
-			"label": "Activate string extraction mode",
-			"info":"visible in Console of DeveloperTools",
-			"type": "boolean",
-			"value": false
-		},
 		"fallbacklanguage": {
 			"label": "fallback language",
 			"info": "CDN hostname to deliver content",
