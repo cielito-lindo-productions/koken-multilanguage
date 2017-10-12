@@ -48,7 +48,6 @@ class KokenMultilanguage extends KokenPlugin {
 				var translation = window.i18nextify
 				.init({
 					debug: 'true',
-					saveMissing: 'true',
 					namespace: 'translation',
 					fallbackLng: '{$fallbacklanguage}',
 					detector: languageDetectorOptions,
