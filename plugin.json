@@ -12,6 +12,12 @@
 			"label": "fallback language",
 			"info": "CDN hostname to deliver content",
 			"type": "string"
+		},
+		"cachetranslations": {
+			"label": "Activate caching of translations in browser (once you are done translating your page)",
+			"info":"",
+			"type": "boolean",
+			"value": false
 		}
 	}
 }

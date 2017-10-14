@@ -10,6 +10,13 @@ class KokenMultilanguage extends KokenPlugin {
 	function render()
 	{
 		$path = $this->get_path();
+		if($this->data->cachetranslations==1)
+		{
+			$cachetranslations='true';
+		}
+		else {
+			$cachetranslations='false';
+		}
 		if($this->data->fallbacklanguage=='')
 		{
 			$fallbacklanguage='en';
@@ -22,6 +29,7 @@ class KokenMultilanguage extends KokenPlugin {
 			//https://unpkg.com/i18nextify@2.1.0/i18nextify.js-->
 			<br><script src="{$path}/assets/i18nextify_lessconsoleoutput.min.js"></script>
 			<script src="https://unpkg.com/i18next-browser-languagedetector@2.0.0/i18nextBrowserLanguageDetector.js"></script>
+			<script src="https://unpkg.com/i18next-localstorage-cache@1.1.1/i18nextLocalStorageCache.min.js"></script>
 			<script>
 				window.i18nextify.i18next.use(i18nextBrowserLanguageDetector);
 				var languageDetectorOptions = 
@@ -45,12 +53,22 @@ class KokenMultilanguage extends KokenPlugin {
 					// optional htmlTag with lang attribute, the default is:
 					htmlTag: document.documentElement
 				};
+				window.i18nextify.i18next.use(window.i18nextLocalStorageCache);
+				var cacheOptions =
+				{
+					enabled: {$cachetranslations},
+					prefix: 'i18next_res_',
+					expirationTime: 7 * 24 * 60 * 60 * 1000
+				};
+
 				var translation = window.i18nextify
 				.init({
 					debug: 'true',
+					saveMissing: 'true',
 					namespace: 'translation',
 					fallbackLng: '{$fallbacklanguage}',
 					detector: languageDetectorOptions,
+					cache: cacheOptions,
 					ignoreTags: ['script','img','noscript', 'alt', 'src'],
 					ignoreIds: ['ignoreMeId','noscript', 'alt', 'src'],
 					ignoreClasses: ['ignoreMeClass','noscript', 'alt', 'src'],
