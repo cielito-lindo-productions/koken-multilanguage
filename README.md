@@ -27,6 +27,12 @@ Installation
 <a href='./?lng=en'>en</a>&nbsp;|&nbsp;<a href='./?lng=de'>de</a>
 ```
 
+5. Open the Developer Console of your browser und copy the missing strings that show up into your translation files on your webspace.
+
+6. Translate the strings into the desired languages.
+
+7. Once finished enable translation caching via the plugin settings. This loads tem faster but also makes translations more reliable for your page visitors.
+
 Changelog
 ---------
 
