@@ -31,11 +31,11 @@ Installation
 
 6. Translate the strings into the desired languages.
 
-7. Once finished enable translation caching via the plugin settings. This loads tem faster but also makes translations more reliable for your page visitors.
+7. Once finished enable translation caching via the plugin settings. This loads translations faster but also makes them more reliable for your page visitors.
 
 Further information
 ---------
-If you want to get some further information about this plugin please read [this](https://www.cielitolindo.de/essays/2017/10/enable-multi-language-support-on-a-koken-site/) blog post
+If you want to get some further information about this plugin please [read this blog post](https://www.cielitolindo.de/essays/2017/10/enable-multi-language-support-on-a-koken-site/)
 
 
 Changelog
