@@ -11,7 +11,7 @@ Requirements
 Demonstration
 ------------
 
-Will be added soon
+See [Cielito Lindo Productions](https://www.cielitolindo.de) for a demonstration of the plugin
 
 Installation
 ------------
@@ -33,7 +33,14 @@ Installation
 
 7. Once finished enable translation caching via the plugin settings. This loads tem faster but also makes translations more reliable for your page visitors.
 
+Further information
+---------
+If you want to get some further information about this plugin please read [this](https://www.cielitolindo.de/essays/2017/10/enable-multi-language-support-on-a-koken-site/) blog post
+
+
 Changelog
 ---------
+
+1.1 - Implement browser language detection and translation caching
 
 1.0 - Initial release

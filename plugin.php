@@ -58,7 +58,7 @@ class KokenMultilanguage extends KokenPlugin {
 				{
 					enabled: {$cachetranslations},
 					prefix: 'i18next_res_',
-					expirationTime: 7 * 24 * 60 * 60 * 1000
+					expirationTime: 24 * 60 * 60 * 1000 // in seconds
 				};
 
 				var translation = window.i18nextify
