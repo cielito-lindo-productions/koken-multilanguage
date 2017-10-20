@@ -63,6 +63,7 @@ class KokenMultilanguage extends KokenPlugin {
 
 				var translation = window.i18nextify
 				.init({
+					interpolation: { prefix: '__', suffix: '__' },
 					debug: 'true',
 					saveMissing: 'true',
 					namespace: 'translation',
@@ -74,7 +75,7 @@ class KokenMultilanguage extends KokenPlugin {
 					ignoreClasses: ['ignoreMeClass','noscript', 'alt', 'src'],
 					backend: {
 					      // for all available options read the backend's repository readme file
-					      loadPath: '{$path}/assets/locales/{{lng}}/{{ns}}.json',
+					      loadPath: '{$path}/assets/locales/__lng__/__ns__.json'
 					}
 				});
 			</script>
